@@ -1,4 +1,5 @@
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany} from "typeorm";
+import PhoneNumber from "./phoneNumber";
 
 @Entity()
 export class Contact {
@@ -6,14 +7,12 @@ export class Contact {
     id!: number;
   @Column()
     name!: string;
-  @Column()
-    homeNumber!: string;
-  @Column()
-    mobileNumber!: string;
-  @Column()
-    workNumber!: string;
-  @Column()
-    otherNumber!: string;
+  @OneToMany(
+      type => PhoneNumber,
+      (phoneNumber) => phoneNumber.contact,
+      {eager: true, cascade: true}
+      )
+    phoneNumber!: PhoneNumber[];
   @Column()
     email!: string;
   @Column()
