@@ -13,7 +13,7 @@ class ContactController {
       contacts = await getRepository(Contact).findOneOrFail(req.params.id);
     } catch (error) {
       //If not found, send a 404 response
-      return res.status(404).send("No contacts found");;
+      return res.status(404).send("No contacts found");
     }
     return res.json (contacts);
   }
@@ -26,7 +26,7 @@ class ContactController {
       contact = await getRepository(Contact).findOneOrFail(req.params.id);
     } catch (error) {
       //If not found, send a 404 response
-      return res.status(404).send("Contact not found");;
+      return res.status(404).send("Contact not found");
     }
     return res.json(contact)
   }
@@ -46,7 +46,7 @@ class ContactController {
       contact = await getRepository(Contact).findOneOrFail(req.params.id);
     } catch (error) {
       //If not found, send a 404 response
-      return res.status(404).send("Contact not found");;
+      return res.status(404).send("Contact not found");
     }
     getRepository(Contact).merge(contact, req.body)
     const result = await getRepository(Contact).save(contact)
@@ -57,7 +57,7 @@ class ContactController {
   public async deleteContact(req: Request, res: Response): Promise <Response> {
     const contact = await getRepository(Contact).delete(req.params.id)
     if (!contact) {
-      return res.status(404).send( "Contact not found");;
+      return res.status(404).send( "Contact not found");
     }
     return res.json(contact)
   }

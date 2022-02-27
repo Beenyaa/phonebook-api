@@ -1,26 +1,24 @@
-import express, { Application, Request, Response } from "express";
-const morgan = require('morgan');
+import "reflect-metadata";
+import express from "express";
+import * as bodyParser from "body-parser";
+import { createConnection } from "typeorm";
+import routes from "./routes";
 
-const app: Application = express();
-const port = 3000;
 
-// Body parsing Middleware
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+//Connects to the Database -> then starts the express
+createConnection()
+  .then(async () => {
+    // Create a new express application instance
+    const app = express();
 
-app.get(
-    "/",
-    async (req: Request, res: Response): Promise<Response> => {
-        return res.status(200).send({
-            message: "Hello World!",
-        });
-    }
-);
+    // Call middlewares
+    app.use(bodyParser.json()); 
 
-try {
-    app.listen(port, (): void => {
-        console.log(`Connected successfully on port ${port}`);
+    //Set all routes from routes folder
+    app.use("/", routes);
+
+    app.listen(3000, () => {
+      console.log("Server started on port 3000!");
     });
-} catch (error: any) {
-    console.error(`Error occured: ${error.message}`);
-}
+  })
+  .catch((error: any) => console.log(error));
