@@ -1,7 +1,5 @@
 # ☎️ Phone book API challenge
 
-![What da dog doin?](https://media2.giphy.com/media/dtBi0s3hndz7q/giphy.gif?cid=ecf05e47khqam300sl443oxsenu1fxk3z8p6tpo73ugn0myt&rid=giphy.gif&ct=g)
-
 An API that serves as the backend for a phone book app, providing a list of people and their contact details.
 
 Made with Node.js + TypeScript + TypeORM + PostgreSQL within a 3 hour limit.
@@ -62,3 +60,5 @@ While the scope of this project is minimal in terms of requirements and therefor
 #### Verdict
 
 As I am using PostgreSQL in this project I will be using TypeORM to access the database as it should help me save time in having to build custom queries for the simple CRUD operations that the project requires. While out of the 3 technologies TypeORM is probably the least documented due to the age of the project, because I am only planning to use its Data mapping capabilites, it should not hinder the progress of the phonebook-api project.
+
+## ⬆️Potential Improvements
