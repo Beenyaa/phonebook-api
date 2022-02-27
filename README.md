@@ -18,9 +18,11 @@ REQUIREMENTS:
 
 ### Run
 
-`docker-compose up`
+`docker-compose up` - starts a dockerised PostgreSQL server
 
-`npm run dev`
+`npm run seed` - input a mock database entry
+
+`npm run dev` - starts the express API server
 
 ## 🧠 Design Decisions
 
