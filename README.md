@@ -63,4 +63,18 @@ While the scope of this project is minimal in terms of requirements and therefor
 
 As I am using PostgreSQL in this project I will be using TypeORM to access the database as it should help me save time in having to build custom queries for the simple CRUD operations that the project requires. While out of the 3 technologies TypeORM is probably the least documented due to the age of the project, because I am only planning to use its Data mapping capabilites, it should not hinder the progress of the phonebook-api project.
 
+### Testing
+
+|   | Cypress  | Jest |
+| :------------: | ------------ | ------------ | ------------ |
+|  testing category | Unit Testing, Integration Testing, E2E Testing  | Unit Testing |
+|  info | An extensive testing suite  | An extendable test runner |
+
+#### Verdict
+
+In this project I will be using Cypress to carry out testing as in this project, I haven't done much development on the service level so there aren't any unit tests that I need to conduct, however since I have created a number of API endpoints, Cypress will allow me to carry out Integration Testing without much setup as Integration Testing is one of its many built-in features.
+
 ## ⬆️Potential Improvements
+- Adding validation to the endpoints to avoid bad data and other avoidable errors.
+- Separate endpoints to update the phone numbers since they are an object on their own.
+- 
