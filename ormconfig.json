@@ -1,0 +1,10 @@
+{
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "admin",
+    "password": "password",
+    "database": "phonebook",
+    "synchronize": true,
+    "entities": ["src/entity/*.ts"]
+  }
