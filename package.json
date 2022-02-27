@@ -4,8 +4,8 @@
   "description": "Phonebook API Challenge",
   "main": "index.ts",
   "scripts": {
+    "seed": "ts-node-dev src/database/seed.ts",
     "dev": "ts-node-dev ./src/index.ts",
-    "build": "tsc && node ./dist/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Bence Gadányi",
