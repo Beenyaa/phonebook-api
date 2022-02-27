@@ -11,6 +11,7 @@ Guide to install and run the API
 REQUIREMENTS:
 - Docker
 - Node v16+
+- Cypress
 
 ### Installation
 
@@ -77,4 +78,4 @@ In this project I will be using Cypress to carry out testing as in this project,
 ## ⬆️Potential Improvements
 - Adding validation to the endpoints to avoid bad data and other avoidable errors.
 - Separate endpoints to update the phone numbers since they are an object on their own.
-- 
+- Integration Testing for the API endpoints
