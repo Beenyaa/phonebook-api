@@ -10,7 +10,7 @@ class ContactController {
   public async listAll(req: Request, res: Response): Promise<Response> {
     let contacts;
     try {
-      contacts = await getRepository(Contact).findOne();
+      contacts = await getRepository(Contact).find();
     } catch (error) {
       //If not found, send a 404 response
       return res.status(404).send("No contacts found");
